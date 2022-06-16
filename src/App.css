@@ -15,7 +15,6 @@ html {
   justify-content: center;
   font-family: 'Play', sans-serif;
   color: white;
-  /* width: 100%; */
   max-width: 100vw;
   padding: 1rem 1.5rem;
 }
@@ -46,10 +45,10 @@ h2 {
 
 .item {
   background-color: #b6d9e7;
-  padding: 1.5em;
+  padding: 6vmin;
   margin-bottom: 1em;
   border: 1px solid #282c34;
-  box-shadow: 2px 2px #282c34;
+  box-shadow: 3px 3px #282c34;
 }
 
 dt {
@@ -64,7 +63,7 @@ dd {
 }
 
 .cointainer img {
-  max-width: 40vw;
+  max-width: 40%;
   animation: spin infinite 10s linear;
 }
 
@@ -73,8 +72,8 @@ li {
 }
 
 .pic {
-  padding: .5em 0;
   text-align: center;
+  padding: 1.25em 0 0 0;
 }
 
 .title {
@@ -99,4 +98,35 @@ footer {
   font-size: 1.25rem;
   font-family: 'DM Mono', monospace;
   text-align: center;
+}
+
+@media screen and (min-width: 540px) {
+  .item {
+    padding: calc(2em + 6vmin);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .cointainer {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cointainer {
+    max-width: 90%;
+  }
+
+  .cointainer dl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4vw;
+    justify-content: center;
+  }
+
+  .item {
+    padding: calc(2em + 3vmin);
+    max-width: 30%;
+  }
 }
